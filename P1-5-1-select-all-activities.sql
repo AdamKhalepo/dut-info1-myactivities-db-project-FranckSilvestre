@@ -12,3 +12,6 @@ LEFT JOIN "user" ON owner_id = "user".id
 WHERE creation_date > '2019-09-01'
 ORDER BY title, username;
 
+-- le LEFT JOIN correspond à une jointure dite "externe à gauche". Cela permet d'indiquer qu'on veut faire 
+-- apparaitre les lignes de la table de gauche (activity) même si le champ de la clé étrangère est null 
+-- (owner_id = null dans notre cas)
